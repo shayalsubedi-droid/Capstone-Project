@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSCC Union Cafe - Customer Feedback</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+    .nav { text-align: center; margin-bottom: 20px; }
+    .nav a { margin: 0 10px; text-decoration: none; color: #8C1D40; font-weight: bold; }
+    .nav a:hover { text-decoration: underline; }
+    .container { max-width: 600px; margin: 0 auto; background: #ffffff; padding: 25px 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+    h1 { color: #8C1D40; text-align: center; margin-bottom: 5px; }
+    .subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 0.95rem; }
+    .form-group { margin-bottom: 18px; }
+    label { display: block; font-weight: bold; margin-bottom: 6px; }
+    select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    button { width: 100%; background-color: #8C1D40; color: #fff; border: none; padding: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #6b1430; }
+    .success-msg { margin-top: 15px; padding: 10px; background: #d4edda; color: #155724; border-radius: 4px; display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="index.html">Feedback Form </a> | 
+    <a href="cyber.html">Cyber Security </a> | 
+    <a href="ims.html">IMS </a>
+  </div>
+
+  <div class="container">
+    <h1>CSCC Union Cafe</h1>
+    <p class="subtitle">Customer Feedback Portal</p>
+
+    <form id="feedbackForm">
+      <div class="form-group">
+        <label for="rating">1. Overall experience?</label>
+        <select id="rating" name="rating" required>
+          <option value="">-- Select --</option>
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Good</option>
+          <option value="3">3 - Average</option>
+          <option value="2">2 - Bad</option>
+          <option value="1">1 - Terrible</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="foodQuality">2. Food quality?</label>
+        <select id="foodQuality" name="foodQuality" required>
+          <option value="">-- Select --</option>
+          <option value="Excellent">Fresh & Good</option>
+          <option value="Acceptable">Average</option>
+          <option value="Needs Improvement">Needs Improvement</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="serviceSpeed">3. Speed of service?</label>
+        <select id="serviceSpeed" name="serviceSpeed" required>
+          <option value="">-- Select --</option>
+          <option value="Fast">Fast</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Slow">Slow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">4. Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Your thoughts..."></textarea>
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+      <div id="statusMessage" class="success-msg">Feedback recorded successfully!</div>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
